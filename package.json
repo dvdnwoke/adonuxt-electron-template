@@ -1,0 +1,51 @@
+{
+  "name": "adonuxt-electron-template",
+  "version": "1.0.0",
+  "author": "",
+  "description": "",
+  "license": "MIT",
+  "private": true,
+  "main": "server.js",
+  "scripts": {
+    "serve:dev": "npm run dev",
+    "dev": "electron . && nodemon --watch app --watch bootstrap --watch config --watch .env -x node server.js",
+    "build": "node ./ace nuxtbuild",
+    "start": "cross-env NODE_ENV=production node server.js",
+    "precommit": "npm run lint",
+    "lint": "standard && eslint --ext .js,.vue resources/"
+  },
+  "dependencies": {
+    "adonis-ace": "^3.0.6",
+    "adonis-auth": "^1.0.5",
+    "adonis-commands": "^2.1.5",
+    "adonis-fold": "^3.0.3",
+    "adonis-framework": "^3.0.9",
+    "adonis-lucid": "^3.0.13",
+    "adonis-middleware": "^1.0.10",
+    "adonis-websocket": "^1.0.2",
+    "cross-env": "^3.1.4",
+    "electron": "^1.4.15",
+    "nuxt": "latest",
+    "standard": "^8.6.0",
+    "youch": "^2.0.4"
+  },
+  "standard": {
+    "global": [
+      "use",
+      "make"
+    ]
+  },
+  "autoload": {
+    "App": "./app"
+  },
+  "devDependencies": {
+    "babel-eslint": "^7.1.1",
+    "eslint": "^3.13.1",
+    "eslint-config-standard": "^6.2.1",
+    "eslint-plugin-html": "^2.0.0",
+    "eslint-plugin-promise": "^3.4.0",
+    "eslint-plugin-standard": "^2.0.1",
+    "nodemon": "^1.11.0",
+    "standard": "^8.6.0"
+  }
+}
