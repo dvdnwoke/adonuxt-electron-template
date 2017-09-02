@@ -7,7 +7,7 @@ This project contains little addition from AdoNuxt
 
 ```bash
 npm install
-
+```
 ## Documentation
 
 - [Electron](https://electron.atom.io/docs/)
